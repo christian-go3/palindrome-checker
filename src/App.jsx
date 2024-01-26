@@ -9,8 +9,11 @@ function App() {
     const inputStr = e.target.value;
     setInput(inputStr);
   }
+
   const isPalindrome = palindromeChecker(input);
+
   let output;
+  
   switch (isPalindrome) {
     case true:
       output = "It's a palindrome!";
@@ -19,15 +22,15 @@ function App() {
       output = "It's not a palindrome.";
       break;
     default:
-      output = 'Enter a palindrome text...';
+      output = '';
   }
+
+  const style = isPalindrome ? { "color" : "#97c389"} : { "color" : "red" };
 
   return (
     <div className="container">
       <h1>Palindrome Checker</h1>
-      <label htmlFor="input" className="input-label">
-        Input:
-      </label>
+      <label htmlFor="input" className="input-label"></label>
       <input
         id="input"
         type="text"
@@ -35,10 +38,29 @@ function App() {
         onChange={handleChange}
         value={input}
       />
-      <label htmlFor="output" className="output-label">
-        Output:
-      </label>
-      <pre id="output">&gt;&gt; {output}</pre>
+      <pre id="output" style={style}>
+        {output}
+      </pre>
+      <p>
+        Created by{' '}
+        <a
+          href="https://github.com/christian-go3"
+          target="_blank"
+          rel="noreferrer"
+        >
+          christian-go3
+        </a>
+      </p>
+      <p>
+        View project @{' '}
+        <a
+          href="https://github.com/christian-go3/palindrome-checker"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+      </p>
     </div>
   );
 }
