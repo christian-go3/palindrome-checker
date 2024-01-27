@@ -42,7 +42,7 @@ function App() {
         {output}
       </pre>
       <p>
-        Created by{' '}
+        Coded by{' '}
         <a
           href="https://github.com/christian-go3"
           target="_blank"

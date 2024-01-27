@@ -46,3 +46,6 @@ p {
   font-size: 0.8rem;
   text-align: right;
 }
+p a:visited {
+  color: inherit;
+}
